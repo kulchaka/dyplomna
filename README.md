@@ -95,7 +95,7 @@ $ npm run build
 
 You can also see an example by following the link below:
 
-#### https://github.com/kulchaka/dyplomna
+#### https://kulchaka.github.io/dyplomna
 
 - this project uses: HTML,CSS,GIT and Webpack
 
