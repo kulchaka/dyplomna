@@ -1,0 +1,18 @@
+@import url(./_black/links_black.css);
+@import url(./_active-white/links_active-white.css);
+@import url(./_hover-white/links_hover-white.css);
+@import url(./_active-black/links_active-black.css);
+
+.links {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: #fff;
+}

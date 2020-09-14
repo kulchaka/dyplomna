@@ -1,0 +1,10 @@
+.about__photo {
+    /* flex-basis: 100%;
+    max-width: 464px;
+    border-radius: 1000px; */
+    /* min-height: 464px; */
+    display: block;
+    max-width: 464px;
+    width: 100%;
+    margin-right: 56px;
+}

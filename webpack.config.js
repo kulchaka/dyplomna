@@ -10,10 +10,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/js/index.js'),
+    // entry: path.resolve(__dirname, './src/js/index.js'),
+    entry: {
+        index: './src/js/index.js',
+        about: './src/js/about.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './js/[name].[chunkhash].js'
     },
     module: {
         rules: [{ // тут описываются правила
@@ -45,7 +49,7 @@ module.exports = {
                         options: {
                             mozjpeg: {
                                 progressive: true,
-                                quality: 65
+                                quality: 80
                             },
                             // optipng.enabled: false will disable optipng
                             optipng: {
@@ -71,10 +75,17 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            chunks: ['index'],
+            template: 'src/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['about'],
+            template: 'src/about.html',
+            filename: 'about.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: './css/[name].[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,

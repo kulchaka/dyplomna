@@ -1,0 +1,4 @@
+.techno__technologies {
+    display: flex;
+    flex-wrap: wrap;
+}

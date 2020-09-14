@@ -1,0 +1,11 @@
+@import url(./_black/header__logo_black.css);
+
+.header__logo {
+    font-family: 'RobotoSlab';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}

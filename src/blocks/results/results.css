@@ -1,0 +1,16 @@
+@import url(./__head-block/results__head-block.css);
+@import url(./__title/results__title.css);
+@import url(./__link-analtyik/results__link-analtyik.css);
+@import url(./__news-grid/results__news-grid.css);
+@import url(./__block/results__block.css);
+@import url(./__photo/results__photo.css);
+@import url(./__news/results__news.css);
+@import url(./__news-date/results__news-date.css);
+@import url(./__news-title/results__news-title.css);
+@import url(./__news-text/results__news-text.css);
+@import url(./__news-source/results__news-source.css);
+
+.results {
+    background: #F5F6F7;
+    padding: 80px 0;
+}

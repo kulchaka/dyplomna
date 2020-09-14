@@ -1,2 +1,2 @@
 //??-----------------------Impots JS---------------------------
-import '../pages/index.css'
+import '../pages/index.css';

@@ -1,0 +1,17 @@
+@keyframes rotate_circle {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+
+}
+
+.searching__image {
+    display: block;
+    margin: 0 auto;
+    animation: rotate_circle 1s linear infinite;
+}

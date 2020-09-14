@@ -1,0 +1,7 @@
+@import url(./__subscr/about__subscr.css);
+@import url(./__photo/about__photo.css);
+
+.about {
+    padding: 80px 0;
+    display: flex;
+}
