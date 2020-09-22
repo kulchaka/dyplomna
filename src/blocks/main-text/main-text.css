@@ -1,8 +1,27 @@
+@import url(./_analystic/main-text_analystic.css);
+@import url(./_about/main-text_about.css);
+
 .main-text {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     color: #1A1B22;
+}
+
+@media screen and (max-width: 991px) {
+    .main-text {
+        margin: 16px 0 0;
+    }
+
+    .main-text+.main-text {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-text {
+        margin: 20px 0 0;
+    }
 }

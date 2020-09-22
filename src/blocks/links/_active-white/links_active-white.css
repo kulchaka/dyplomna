@@ -1,3 +1,17 @@
 .links.links_active-white {
     color: #fff;
+    border-bottom: 3px solid white;
+    padding-bottom: 26px;
+}
+
+@media screen and (max-width: 991px) {
+    .links.links_active-white {
+        padding-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .links.links_active-white {
+        padding-bottom: 15px;
+    }
 }

@@ -8,3 +8,15 @@
     background: rgba(196, 196, 196, 0.01);
     box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
+
+@media screen and (max-width: 991px) {
+    .header__line {
+        top: 63px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__line {
+        top: 55px;
+    }
+}

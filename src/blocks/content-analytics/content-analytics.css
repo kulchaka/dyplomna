@@ -1,0 +1,17 @@
+@import url(./__span/content-analytics__span.css);
+
+.content-analytics {
+    padding: 80px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .content-analytics {
+        padding: 64px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content-analytics {
+        padding: 16px 0 24px 0;
+    }
+}

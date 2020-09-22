@@ -2,3 +2,17 @@
     position: relative;
     margin-top: 64px;
 }
+
+@media screen and (max-width: 991px) {
+    .page__form {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .page__form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+    }
+}

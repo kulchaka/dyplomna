@@ -1,4 +1,9 @@
 .techno__technologies {
     display: flex;
-    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 991px) {
+    .techno__technologies {
+        flex-direction: column;
+    }
 }

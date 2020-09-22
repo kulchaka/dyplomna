@@ -4,3 +4,15 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 0 16px;
+    }
+}

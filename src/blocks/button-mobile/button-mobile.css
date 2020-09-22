@@ -1,0 +1,12 @@
+.button-mobile {
+    display: none;
+
+}
+
+@media screen and (max-width: 500px) {
+    .button-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+}

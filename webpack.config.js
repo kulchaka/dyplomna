@@ -10,10 +10,10 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    // entry: path.resolve(__dirname, './src/js/index.js'),
     entry: {
         index: './src/js/index.js',
-        about: './src/js/about.js'
+        about: './src/js/about.js',
+        analytics: './src/js/analytics.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -30,7 +30,12 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    isDev ? 'style-loader' : {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {
@@ -83,6 +88,11 @@ module.exports = {
             chunks: ['about'],
             template: 'src/about.html',
             filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['analytics'],
+            template: 'src/analytics.html',
+            filename: 'analytics.html'
         }),
         new MiniCssExtractPlugin({
             filename: './css/[name].[contenthash].css'

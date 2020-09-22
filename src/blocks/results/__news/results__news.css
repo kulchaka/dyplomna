@@ -1,3 +1,13 @@
 .results__news {
+    box-sizing: border-box;
+    max-height: 304px;
     padding: 20px 24px 24px 24px;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    .results__news {
+        max-height: 270px;
+        padding: 16px;
+    }
 }

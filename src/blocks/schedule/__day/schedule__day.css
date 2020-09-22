@@ -1,0 +1,21 @@
+.schedule__day {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+
+    color: #1A1B22;
+    margin: 0;
+
+}
+
+.schedule__day+.schedule__day {
+    margin-top: 56px;
+}
+
+@media screen and (max-width: 500px) {
+    .schedule__day+.schedule__day {
+        margin-top: 24px;
+    }
+}

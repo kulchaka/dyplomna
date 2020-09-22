@@ -1,10 +1,11 @@
 @import url(./_blue/button_blue.css);
 @import url(./_show-more/button_show-more.css);
+@import url(./_mobile/button_mobile.css);
 
 .button {
     padding: 20px 54px;
     border-radius: 80px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

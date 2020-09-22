@@ -1,0 +1,11 @@
+@import url(./__subtitle/schedule__subtitle.css);
+@import url(./__right/schedule__right.css);
+@import url(./__left/schedule__left.css);
+@import url(./__day/schedule__day.css);
+@import url(./__percents/schedule__percents.css);
+
+.schedule {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

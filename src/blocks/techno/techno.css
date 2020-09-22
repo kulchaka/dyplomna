@@ -12,3 +12,15 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 991px) {
+    .techno {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .techno {
+        padding: 32px 0;
+    }
+}

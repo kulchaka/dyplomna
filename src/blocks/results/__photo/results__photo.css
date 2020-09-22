@@ -1,4 +1,19 @@
+@import url(./_01/results__photo_01.css);
+@import url(./_02/results__photo_02.css);
+@import url(./_03/results__photo_03.css);
+@import url(./_04/results__photo_04.css);
+@import url(./_05/results__photo_05.css);
+@import url(./_06/results__photo_06.css);
+
 .results__photo {
     height: 272px;
     background-image: url("../../../images/grid_photos/card/image_08.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+    .results__photo {
+        height: 150px;
+    }
 }

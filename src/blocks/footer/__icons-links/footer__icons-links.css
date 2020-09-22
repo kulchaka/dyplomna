@@ -3,3 +3,9 @@
     list-style: none;
     padding: 0;
 }
+
+@media screen and (max-width: 434px) {
+    .footer__icons-links {
+        align-self: flex-start;
+    }
+}
