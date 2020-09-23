@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -101,11 +101,17 @@
     </section>
     <div class="container">
       <section class="about">
-        <img
-          class="about__photo"
-          src="<%=require('./images/pictures/author.jpg')%>"
-          alt=""
-        />
+        <picture class="about__photo">
+          <source
+            srcset="<%=require('./images/pictures/author.webp')%>"
+            type="image/webp"
+          />
+          <img
+            class="about__photo"
+            src="<%=require('./images/pictures/author.jpg')%>"
+            alt="Author's photo"
+          />
+        </picture>
         <div class="about__subscr">
           <h2 class="main-title">Об авторе</h2>
           <p class="main-text">
@@ -132,7 +138,17 @@
   <div class="card">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
-       <div class="card__img"></div>
+       <picture class="card__img">
+  <source
+    srcset="<%=require('./images/pictures/author_mini_03.webp')%>"
+    type="image/webp"
+  />
+  <img
+    class="card__img"
+    src="<%=require('./images/pictures/author_mini_03.jpg')%>"
+    alt="Inga Ivanova's photo"
+  />
+</picture>
       <div class="card__text-block">
        <h4 class="card__name">Инга Иванова</h4>
        <span class="card__mail">ingaiva@yandex.ru</span>
@@ -145,7 +161,17 @@
   <div class="card">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
-       <div class="card__img"></div>
+       <picture class="card__img">
+  <source
+    srcset="<%=require('./images/pictures/author_mini_01.webp')%>"
+    type="image/webp"
+  />
+  <img
+    class="card__img"
+    src="<%=require('./images/pictures/author_mini_01.jpg')%>"
+    alt="Anton Dolinin's photo"
+  />
+</picture>
       <div class="card__text-block">
        <h4 class="card__name">Антон Долинин</h4>
        <span class="card__mail">anton@yandex.ru</span>
@@ -157,7 +183,17 @@
   <div class="card">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
-       <div class="card__img"></div>
+       <picture class="card__img">
+  <source
+    srcset="<%=require('./images/pictures/author_mini_02.webp')%>"
+    type="image/webp"
+  />
+  <img
+    class="card__img"
+    src="<%=require('./images/pictures/author_mini_02.jpg')%>"
+    alt="Maria Feodorova's photo"
+  />
+</picture>
       <div class="card__text-block">
        <h4 class="card__name">Мария Фёдорова</h4>
        <span class="card__mail">mariiifed@yandex.ru</span>
@@ -169,7 +205,17 @@
   <div class="card">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
-       <div class="card__img"></div>
+       <picture class="card__img">
+  <source
+    srcset="<%=require('./images/pictures/author_mini_03.webp')%>"
+    type="image/webp"
+  />
+  <img
+    class="card__img"
+    src="<%=require('./images/pictures/author_mini_03.jpg')%>"
+    alt="Inga Ivanova's photo"
+  />
+</picture>
       <div class="card__text-block">
        <h4 class="card__name">Инга Иванова</h4>
        <span class="card__mail">ingaiva@yandex.ru</span>
@@ -182,7 +228,17 @@
   <div class="card">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
-       <div class="card__img"></div>
+       <picture class="card__img">
+  <source
+    srcset="<%=require('./images/pictures/author_mini_01.webp')%>"
+    type="image/webp"
+  />
+  <img
+    class="card__img"
+    src="<%=require('./images/pictures/author_mini_01.jpg')%>"
+    alt="Anton Dolinin's photo"
+  />
+</picture>
       <div class="card__text-block">
        <h4 class="card__name">Антон Долинин</h4>
        <span class="card__mail">anton@yandex.ru</span>
