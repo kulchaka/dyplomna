@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="<%=require('./images/icons/favicon.ico')%>"
+      type="image/x-icon"
+    />
     <title>Analytics</title>
   </head>
   <body>
@@ -31,12 +36,13 @@
       </div>
       <section class="content-analytics">
         <h1 class="main-title">Вы спросили:</h1>
-        <span class="content-analytics__span">«Путешествия»</span>
+        <span class="content-analytics__span"></span>
         <p class="main-text main-text_analystic">
-          Новостей за неделю: <span class="weekly-news"><b>34 324</b></span>
+          Новостей за неделю: <span class="main-text__weekly"></span>
         </p>
         <p class="main-text main-text_analystic">
-          Упоминаний в загаловках: <span class="weekly-titles"><b>235</b></span>
+          Упоминаний в загаловках:
+          <span class="main-text__titles"></span>
         </p>
       </section>
     </main>
@@ -62,22 +68,22 @@
         </div>
         <div class="schedule">
           <div class="schedule__right">
-            <p class="schedule__day">19, пн</p>
-            <p class="schedule__day">20, вт</p>
-            <p class="schedule__day">21, ср</p>
-            <p class="schedule__day">22, чт</p>
-            <p class="schedule__day">23, пт</p>
-            <p class="schedule__day">24, сб</p>
-            <p class="schedule__day">25, вс</p>
+            <p class="schedule__day schedule__day_1">19, пн</p>
+            <p class="schedule__day schedule__day_2">20, вт</p>
+            <p class="schedule__day schedule__day_3">21, ср</p>
+            <p class="schedule__day schedule__day_4">22, чт</p>
+            <p class="schedule__day schedule__day_5">23, пт</p>
+            <p class="schedule__day schedule__day_6">24, сб</p>
+            <p class="schedule__day schedule__day_7">25, вс</p>
           </div>
           <div class="schedule__left">
-            <div class="schedule__percents schedule__percents_mon">15</div>
-            <div class="schedule__percents schedule__percents_tue">18</div>
-            <div class="schedule__percents schedule__percents_wed">11</div>
-            <div class="schedule__percents schedule__percents_thu">39</div>
-            <div class="schedule__percents schedule__percents_fri">45</div>
-            <div class="schedule__percents schedule__percents_sat">73</div>
-            <div class="schedule__percents schedule__percents_sun">34</div>
+            <div class="schedule__percents schedule__percents_day1">15</div>
+            <div class="schedule__percents schedule__percents_day2">18</div>
+            <div class="schedule__percents schedule__percents_day3">11</div>
+            <div class="schedule__percents schedule__percents_day4">39</div>
+            <div class="schedule__percents schedule__percents_day5">45</div>
+            <div class="schedule__percents schedule__percents_day6">73</div>
+            <div class="schedule__percents schedule__percents_day7">34</div>
           </div>
         </div>
         <div class="numbers">

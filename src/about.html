@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="<%=require('./images/icons/favicon.ico')%>"
+      type="image/x-icon"
+    />
     <title>About</title>
   </head>
   <body>
@@ -134,8 +139,9 @@
           >
         </div>
       </div>
-<div class="cards">
-  <div class="card">
+<div class="cards swiper-container">
+  <div class="swiper-wrapper">
+  <!-- <div class="card swiper-slide">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
        <picture class="card__img">
@@ -157,8 +163,8 @@
     <p class="card__text">With Emmet, you can type CSS-like expressions 
       that can be dynamically parsed, and produce 
       output depending on what you type in the abb...</p>
-  </div>
-  <div class="card">
+  </div> -->
+  <!-- <div class="card swiper-slide">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
        <picture class="card__img">
@@ -179,8 +185,8 @@
     </div>
     <p class="card__text">Emmet (formerly Zen Coding) is a web-
       developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-  </div>
-  <div class="card">
+  </div> -->
+  <!-- <div class="card swiper-slide">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
        <picture class="card__img">
@@ -201,8 +207,8 @@
     </div>
     <p class="card__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open  <span class="card__text_dev">Tools >
       Plugins > Available plugins</span> and find and install Emmet plugin.</p>
-  </div>
-  <div class="card">
+  </div> -->
+  <!-- <div class="card swiper-slide">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
        <picture class="card__img">
@@ -224,8 +230,8 @@
     <p class="card__text">With Emmet, you can type CSS-like expressions 
       that can be dynamically parsed, and produce 
       output depending on what you type in the abb...</p>
-  </div>
-  <div class="card">
+  </div> -->
+  <!-- <div class="card swiper-slide">
     <div class="card__date">14 августа, 2019</div>
      <div class="card__person">
        <picture class="card__img">
@@ -246,21 +252,23 @@
     </div>
     <p class="card__text">Emmet (formerly Zen Coding) is a web-
       developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-  </div>
-  <div class="cards__arrow cards__arrow_left">&#60;
-  </div>
-  <div class="cards__arrow cards__arrow_right">&#62;
-  </div>
-  <div class="cards__shadow cards__shadow_right">
-  </div>
-  <div class="cards__shadow cards__shadow_left">
-  </div>
+  </div> -->
 </div>
+<div class="cards__shadow cards__shadow_right">
+</div>
+<div class="cards__shadow cards__shadow_left">
+</div>
+  <div class="swiper-button-prev cards__arrow">&#60;</div>
+  <div class="swiper-button-next cards__arrow">&#62;</div>
+
+</div>
+<!-- !! -->
+
+<!--?? Pagination -->
 <div class="slider">
-  <div class="slider__point"></div>
-  <div class="slider__point slider__point_black"></div>
-  <div class="slider__point"></div>
+  <div class="swiper-pagination"></div>
 </div>
+
 <div class="button-mobile container">
   <button class="button button_mobile">Открыть в GitHub</button>
 </div>

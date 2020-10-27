@@ -1,5 +1,7 @@
 @import url(./_analystic/main-text_analystic.css);
 @import url(./_about/main-text_about.css);
+@import url(./__weekly/main-text__weekly.css);
+@import url(./__titles/main-text__titles.css);
 
 .main-text {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
