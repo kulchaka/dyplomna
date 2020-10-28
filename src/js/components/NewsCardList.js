@@ -20,9 +20,6 @@ export default class NewsCardList {
             .then((res) => {
                 this.preloaderBlock.style.display = 'none';
                 this.hideGrid(JSON.parse(localStorage.getItem('news')).totalResults);
-                // obj.articles.forEach((element) => {
-                //     this.addCard(element.url, element.urlToImage, element.publishedAt, element.title, element.description, element.source.name);
-                // })
 
                 for (let index = cards - 3; index < cards; index++) {
                     const element = JSON.parse(localStorage.getItem('news')).articles[index];
@@ -31,6 +28,10 @@ export default class NewsCardList {
                     }
                 }
             })
+            .catch((err) => {
+                console.log(err);
+                return Promise.reject(`Error: ${res.status}`);
+            });
 
     }
 

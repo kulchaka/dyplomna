@@ -34,7 +34,7 @@
               Введите в поиске любую тему и узнайте, насколько популярной она
               была в новостях за прошедшую неделю.
             </p>
-            <form class="page__form">
+            <form class="page__form" novalidate>
               <input
                 id="input"
                 class="page__input"
@@ -48,6 +48,11 @@
               <button type="submit" class="button button_blue" type="submit">
                 Искать
               </button>
+              <div class="page__error">
+                <span class="page__error-msg">
+                  Нужно ввести ключевое слово
+                </span>
+              </div>
             </form>
           </div>
         </section>

@@ -17,23 +17,18 @@ export default class CommitCardList {
 
                 localStorage.setItem('git', JSON.stringify(res));
                 const el = JSON.parse(localStorage.getItem('git'));
-                console.log(el);
-                // el.forEach(element => {
-                //     // console.log(element.author.avatar_url);
-                //     // if (element.author == null) {
-                //     //     element.author.avatar_url = "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png";
-                //     // }
-                //     this.addCard(element.commit.committer.date, element.commit.committer.name, element.commit.committer.email, element.commit.message);
-                // });
 
-                for (let i = 0; i < 20; i++) {
+                for (let i = 0; i < 4; i++) {
                     this.addCard(el[i].commit.committer.date, el[i].author.avatar_url, el[i].commit.committer.name, el[i].commit.committer.email, el[i].commit.message);
                 }
             })
             .then((res) => {
-                console.log(res);
                 this.swipper();
             })
+            .catch((err) => {
+                console.log(err);
+                return Promise.reject(`Error: ${res.status}`);
+            });
 
     }
 }

@@ -7,6 +7,12 @@
     .button-mobile {
         display: flex;
         justify-content: center;
+        text-align: center;
         margin-top: 24px;
+
+    }
+
+    .button_mobile {
+        text-decoration: none;
     }
 }

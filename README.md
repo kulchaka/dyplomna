@@ -2,7 +2,7 @@
 
 - Diploma Thesis - Yandex Praktikum
 
-- current version **v0.0.1**
+- current version **v0.5.0**
 
 ## Installation
 
@@ -68,6 +68,14 @@ npm i babel-loader @babel/cli @babel/core @babel/preset-env [@babel/plugin-propo
 
 ```jsx
 npm i autoprefixer cssnano postcss-loader --save-dev
+```
+
+**For Swiper JS**
+
+- [swiper](https://swiperjs.com)
+
+```jsx
+npm install swiper
 ```
 
 **Dependences packeges**

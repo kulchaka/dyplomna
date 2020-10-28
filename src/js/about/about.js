@@ -9,6 +9,9 @@ import {
 import 'swiper/swiper-bundle.css';
 import '../../pages/about.css';
 //??--------------------------------------------------
+
+
+//??-----------------------Swiper---------------------------
 import Swiper, {
     Navigation,
     Pagination
@@ -40,27 +43,26 @@ function swipper() {
         },
     });
 }
+//??--------------------------------------------------
 
 const gitContainer = document.querySelector('.swiper-wrapper');
-// const linkGithub = 'https://api.github.com/repos/yandex/localization-context-extension/commits';
-const linkGithub = 'https://api.github.com/repos/kulchaka/dyplomna/commits';
+const linkGithub = 'https://api.github.com/repos/yandex/localization-context-extension/commits';
+// const linkGithub = 'https://api.github.com/repos/kulchaka/dyplomna/commits';
 
+
+//?? Classes ------------------------------------
 const apiGithub = new GithubApi(linkGithub);
 const commitsList = new CommitCardList(gitContainer, apiGithub, callbackFunc, swipper);
+//?? ------------------------------------
 
-// //?? ---------- callBackfunction
+//?? ---------- callBackfunction
 function callbackFunc(date, img, name, mail, text) {
-    if (img == null) {
-        img = "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png";
-    }
 
     const newDate = formateDate(date);
 
     return new CommitCard(newDate, img, name, mail, text).create();
 }
-// //??-----------------------
+//??-----------------------
 
 
-
-// //!! ------
 commitsList.render();

@@ -3,9 +3,16 @@ import NewsCard from './components/NewsCard';
 import NewsCardList from './components/NewsCardList';
 import NewsApi from './modules/NewsApi';
 import DataStorage from './modules/DataStorage';
+import SearchInput from './components/SearchInput';
 import {
     formateDate
 } from './utils/formateDate';
+import {
+    removeCrds
+} from './utils/removeCrds';
+import {
+    formReset
+} from './utils/formReset';
 import {
     cards,
     FORM,
@@ -18,22 +25,24 @@ import {
 import '../pages/index.css';
 //??--------------------------------------------------
 
+
+
 let LOCALSTOR_NEWS = JSON.parse(localStorage.getItem('news'));
-let ARRAY_LENGTH = 0;
 const preloaderBlock = document.querySelector('.searching');
 
 
 function show() {
-    console.log(JSON.parse(localStorage.getItem('news')));
     if (JSON.parse(localStorage.getItem('news')) != null) {
-        if (a > JSON.parse(localStorage.getItem('news')).articles.length || JSON.parse(localStorage.getItem('news')).articles.length < 3) {
+        if (cardСount > JSON.parse(localStorage.getItem('news')).articles.length || JSON.parse(localStorage.getItem('news')).articles.length < 3) {
+            console.log('doesn`t show BTN MORE');
             BUTTON_SHOW_MORE.style.display = 'none';
         } else {
+            console.log('show BTN MORE');
             BUTTON_SHOW_MORE.style.display = 'block';
         }
     }
 }
-show();
+
 
 
 //?? ----------   function callBack Card's infromation
@@ -64,90 +73,71 @@ function hideGrid(results) {
 //?? Classes ------------------------------------
 const apiNews = new NewsApi(LAST_DAY, TODAY, API_KEY);
 const cardList = new NewsCardList(CARD_CONTAINER, apiNews, createCardCallBack, hideGrid, preloaderBlock);
-const localStr = new DataStorage(apiNews, cardList, LOCALSTOR_NEWS);
+const localStr = new DataStorage(apiNews, cardList, LOCALSTOR_NEWS, show);
+const searchInput = new SearchInput();
 //?? ------------------------------------
 
 
 
-//?? Form reset --------------------------
-function formReset(form) {
-    form.reset();
-}
-formReset(FORM);
-//?? --------------------------
 
 
-//?? Remove Cards --------------------------
-function removeCrds() {
-    while (CARD_CONTAINER.firstChild) {
-        CARD_CONTAINER.firstChild.remove();
-    }
-}
-//?? --------------------------
-let a = 3;
-let b = 0;
+
+
+
+let cardСount = 3;
+// let lengthArray = 0;
 //?? Submit FORM ----------------
 FORM.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(input.value);
+    if (searchInput.formValidation(event)) {
+        localStorage.setItem('searchWord', JSON.stringify(input.value));
 
-    localStorage.setItem('searchWord', JSON.stringify(input.value));
+        localStr.setItems(input.value, cards);
 
-    localStr.setItems(input.value, cards);
+        formReset(FORM);
+        removeCrds(CARD_CONTAINER);
+        cardСount = 3;
 
-    formReset(FORM);
-    removeCrds();
-    a = 3;
-    b = JSON.parse(localStorage.getItem('news')).articles.length;
-    show();
+    } else {
+        event.target.querySelector('button').style.cursor = 'not-allowed';
+        event.target.querySelector('button').setAttribute('disabled', true);;
+        event.target.querySelector('.page__error').style.opacity = '1';
+    }
 });
-//?? -------------------------------------
 
+FORM.elements.input.addEventListener('input', searchInput.inputValidation);
 
-
-//?? Show More --------------------------
-
-
+//?? Show More Button--------------------------
 BUTTON_SHOW_MORE.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(JSON.parse(localStorage.getItem('news')));
-    a += 3;
 
-    cardList.render(LOCALSTOR_NEWS, a);
-    // cardList.render(a);
+    cardСount += 3;
 
-    // console.log(LOCALSTOR_NEWS.articles.length);
-    console.log(a);
-
-    console.log(JSON.parse(localStorage.getItem('news')).articles.length);
-
+    cardList.render(LOCALSTOR_NEWS, cardСount);
 
     show();
 })
 //?? --------------------------
 
 
-
+// //?? Function Cards Count ------
+// function lengthOfArray() {
+//     let lengthArray = JSON.parse(localStorage.getItem('news')).articles.length;
+// }
+// //?? -------------------------------------
 
 
 //?? fucntion render
 function renderIndex(LOCALSTOR_NEWS, cards) {
-    // console.log(LOCALSTOR_NEWS.articles.length);
-    // console.log(cards);
 
     if (localStorage.getItem('news') != null) {
         cardList.render(LOCALSTOR_NEWS, cards);
         show();
 
     }
-
-
-    // if (localStorage.getItem('news') != null) {
-    //         cardList.render(LOCALSTOR_NEWS, cards);
-
-    //     }
 }
 
+formReset(FORM);
 renderIndex(LOCALSTOR_NEWS, cards);
 
 //?? -----------------------

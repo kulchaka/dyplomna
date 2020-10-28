@@ -3,3 +3,5 @@
 @import url(./__subtitle/page__subtitle.css);
 @import url(./__form/page__form.css);
 @import url(./__input/page__input.css);
+@import url(./__error/page__error.css);
+@import url(./__error-msg/page__error-msg.css);
