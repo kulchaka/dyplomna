@@ -1,0 +1,9 @@
+.page__error-msg {
+    color: #757575;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 17px;
+    margin: 0 15px;
+}

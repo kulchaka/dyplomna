@@ -1,5 +1,5 @@
 .results__news-source {
-    font-family: 'RobotoSlab',Arial, Helvetica, sans-serif;
+    font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -9,4 +9,8 @@
     text-transform: uppercase;
 
     color: #B6BCBF;
+
+    display: -webkit-box;
+
+    overflow: hidden;
 }

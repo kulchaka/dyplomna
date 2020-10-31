@@ -1,0 +1,10 @@
+.page__error {
+    position: absolute;
+    /* display: none; */
+    margin: 0 30px;
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+    opacity: 0;
+    transition: all .2s linear;
+
+}

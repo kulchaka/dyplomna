@@ -34,8 +34,9 @@
               Введите в поиске любую тему и узнайте, насколько популярной она
               была в новостях за прошедшую неделю.
             </p>
-            <form class="page__form">
+            <form class="page__form" novalidate>
               <input
+                id="input"
                 class="page__input"
                 type="text"
                 placeholder="Введите тему новости"
@@ -44,16 +45,21 @@
                 maxlength="30"
                 required
               />
-              <button type="submit" class="button button_blue" disabled>
+              <button type="submit" class="button button_blue" type="submit">
                 Искать
               </button>
+              <div class="page__error">
+                <span class="page__error-msg">
+                  Нужно ввести ключевое слово
+                </span>
+              </div>
             </form>
           </div>
         </section>
       </div>
     </div>
 
-    <div class="searching">
+    <div class="searching hide-block">
       <img
         class="searching__image"
         src="<%=require('./images/icons/Ellipse.png')%>"
@@ -61,7 +67,7 @@
       />
       <p class="searching__text">Идет поиск новостей...</p>
     </div>
-    <section class="nothing-found">
+    <section class="nothing-found hide-block">
       <img
         class="nothing-found__image"
         src="<%=require('./images/icons/not-found_v1.svg')%>"
@@ -72,7 +78,7 @@
         К сожалению по вашему запросу ничего не найдено.
       </p>
     </section>
-    <section class="results">
+    <section class="results hide-block">
       <div class="container">
         <div class="results__head-block">
           <h3 class="main-title">Результаты поиска</h3>
@@ -80,159 +86,7 @@
             >Посмотреть аналитику &#62;</a
           >
         </div>
-        <div class="results__news-grid">
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_08.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_08.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                Национальное достояние – парки
-              </h4>
-              <p class="results__news-text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых
-                территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <span class="results__news-source">Лента.ру</span>
-            </div>
-          </a>
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_04.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_04.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                Лесные огоньки: история одной фотографии
-              </h4>
-              <p class="results__news-text">
-                Фотограф отвлеклась от освещения суровой политической реальности
-                Мексики, чтобы запечатлеть ускользающую красоту одного из
-                местных чудес природы.
-              </p>
-              <span class="results__news-source">Медуза</span>
-            </div>
-          </a>
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_07.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_07.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-              </h4>
-              <p class="results__news-text">
-                Знаменитый фотограф снимает первозданные леса России, чтобы
-                рассказать о необходимости их сохранения. В этот раз он
-                отправился в Двинско-Пинежскую тайгу, где...
-              </p>
-              <span class="results__news-source">Риа</span>
-            </div>
-          </a>
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_06.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_06.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                Национальное достояние – парки
-              </h4>
-              <p class="results__news-text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых
-                территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <span class="results__news-source">Дзен</span>
-            </div>
-          </a>
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_01.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_01.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                Лесные огоньки: история одной фотографии
-              </h4>
-              <p class="results__news-text">
-                Фотограф отвлеклась от освещения суровой политической реальности
-                Мексики, чтобы запечатлеть ускользающую красоту одного из
-                местных чудес природы.
-              </p>
-              <span class="results__news-source">Афиша</span>
-            </div>
-          </a>
-          <a class="results__block" href="#">
-            <picture class="results__photo">
-              <source
-                srcset="<%=require('./images/grid_photos/card/image_05.webp')%>"
-                type="image/webp"
-              />
-              <img
-                class="results__photo"
-                src="<%=require('./images/grid_photos/card/image_05.jpg')%>"
-                alt="Plants"
-              />
-            </picture>
-            <div class="results__news">
-              <span class="results__news-date">2 августа, 2019</span>
-              <h4 class="results__news-title">
-                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-              </h4>
-              <p class="results__news-text">
-                Знаменитый фотограф снимает первозданные леса России, чтобы
-                рассказать о необходимости их сохранения. В этот раз он
-                отправился в Двинско-Пинежскую тайгу, где...
-              </p>
-              <span class="results__news-source">Медиазона</span>
-            </div>
-          </a>
-        </div>
-
+        <div class="results__news-grid"></div>
         <button class="button button_show-more">Показать еще</button>
       </div>
     </section>

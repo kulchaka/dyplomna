@@ -15,3 +15,9 @@
         margin-top: 16.26px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .results__link-analtyik {
+        display: none;
+    }
+}
