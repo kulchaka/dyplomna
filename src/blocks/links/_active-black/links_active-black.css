@@ -1,0 +1,17 @@
+.links.links_active-black {
+    color: #1A1B22;
+    border-bottom: 3px solid #1A1B22;
+    padding-bottom: 26px;
+}
+
+@media screen and (max-width: 991px) {
+    .links.links_active-black {
+        padding-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .links.links_active-black {
+        padding-bottom: 15px;
+    }
+}

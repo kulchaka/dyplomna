@@ -1,0 +1,34 @@
+@import url(./_mon/.schedule__percents_mon.css);
+@import url(./_tue/.schedule__percents_tue.css);
+@import url(./_wed/.schedule__percents_wed.css);
+@import url(./_thu/.schedule__percents_thu.css);
+@import url(./_fri/.schedule__percents_fri.css);
+@import url(./_sat/.schedule__percents_sat.css);
+@import url(./_sun/.schedule__percents_sun.css);
+
+.schedule__percents {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20.7px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    background-color: #2F71E5;
+    color: #FFFFFF;
+    width: 15%;
+
+    margin: 0;
+    padding-left: 6px;
+}
+
+.schedule__percents+.schedule__percents {
+    margin-top: 56px;
+}
+
+@media screen and (max-width: 500px) {
+    .schedule__percents+.schedule__percents {
+        margin-top: 24px;
+    }
+}

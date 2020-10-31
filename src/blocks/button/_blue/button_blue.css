@@ -1,0 +1,23 @@
+.button.button_blue {
+    position: absolute;
+    right: 0px;
+    border-radius: 100px;
+    background: #2F71E5;
+    color: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.button_blue:hover {
+    background: #347EFF;
+}
+
+.button_blue:active {
+    background: #2A65CC;
+}
+
+@media screen and (max-width: 500px) {
+    .button.button_blue {
+        position: relative;
+        margin-top: 16px;
+    }
+}

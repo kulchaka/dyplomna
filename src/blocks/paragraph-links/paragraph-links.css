@@ -1,0 +1,18 @@
+@import url(./__link/paragraph-links__link.css);
+@import url(./__main/paragraph-links__main.css);
+
+.paragraph-links {
+    margin: 40px 0 0;
+}
+
+@media screen and (max-width: 991px) {
+    .paragraph-links {
+        margin: 32px 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .paragraph-links {
+        display: none;
+    }
+}

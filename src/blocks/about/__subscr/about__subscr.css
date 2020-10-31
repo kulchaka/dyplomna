@@ -1,0 +1,10 @@
+.about__subscr {
+    margin-top: 51px;
+    max-width: 600px;
+}
+
+@media screen and (max-width: 900px) {
+    .about__subscr {
+        margin-top: 24px;
+    }
+}

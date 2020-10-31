@@ -1,0 +1,20 @@
+.page__block {
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+    max-width: 608px;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 991px) {
+    .page__block {
+        max-width: 452px;
+        padding: 40px 0 48px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .page__block {
+        padding: 29px 0 32px 0;
+    }
+}

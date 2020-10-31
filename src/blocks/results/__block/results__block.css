@@ -1,0 +1,10 @@
+.results__block {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.results__block:hover {
+    box-shadow: 0px 5px 15px rgba(8, 29, 45, 0.1);
+}

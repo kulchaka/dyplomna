@@ -1,0 +1,26 @@
+@import url(./_margin/main-title_margin.css);
+
+.main-title {
+    display: inline;
+    font-family: 'RobotoSlab', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .main-title {
+        max-width: 338px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-title {
+        max-width: 200px;
+    }
+}

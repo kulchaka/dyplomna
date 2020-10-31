@@ -1,0 +1,18 @@
+@import url(./__title/analytics-daily__title.css);
+
+.analytics-daily {
+    background-color: #F5F6F7;
+    padding: 80px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .analytics-daily {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .analytics-daily {
+        padding: 24px 0 38px 0;
+    }
+}

@@ -1,0 +1,20 @@
+.footer__copy {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__copy {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 434px) {
+    .footer__copy {
+        margin: 0 0 22px 0;
+    }
+}
