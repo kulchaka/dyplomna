@@ -57,7 +57,7 @@ npm i css-loader file-loader image-webpack-loader style-loader --save-dev
 - [@babel/plugin-proposal-class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
 
 ```jsx
-npm i babel-loader @babel/cli @babel/core @babel/preset-env [@babel/plugin-proposal-class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties) --save-dev
+npm i babel-loader @babel/cli @babel/core @babel/preset-env @babel/plugin-proposal-class-properties --save-dev
 ```
 
 **For css**

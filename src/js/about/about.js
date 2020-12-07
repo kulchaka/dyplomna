@@ -46,8 +46,8 @@ function swipper() {
 //??--------------------------------------------------
 
 const gitContainer = document.querySelector('.swiper-wrapper');
-const linkGithub = 'https://api.github.com/repos/yandex/localization-context-extension/commits';
-// const linkGithub = 'https://api.github.com/repos/kulchaka/dyplomna/commits';
+// const linkGithub = 'https://api.github.com/repos/yandex/localization-context-extension/commits';
+const linkGithub = 'https://api.github.com/repos/kulchaka/dyplomna/commits';
 
 
 //?? Classes ------------------------------------

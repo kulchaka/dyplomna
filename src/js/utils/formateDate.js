@@ -1,6 +1,6 @@
 function formateDate(date) {
 
-    const MM = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
+    const MM = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
     let newDate = date.replace(
         /(\d{4})-(\d{2})-(\d{2})/,

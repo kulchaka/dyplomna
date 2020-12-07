@@ -19,38 +19,38 @@
           <ul class="header__links">
             <li class="header__link">
               <a class="header__menu links links_active-white" href="index.html"
-                >Главная</a
+                >Home</a
               >
             </li>
             <li class="header__link">
-              <a class="header__menu links" href="./about.html">О проекте</a>
+              <a class="header__menu links" href="./about.html">About</a>
             </li>
           </ul>
         </header>
         <section class="page">
           <div class="page__block">
-            <h1 class="page__title">Что в мире творится?</h1>
+            <h1 class="page__title">What is going on in the world?</h1>
             <p class="page__subtitle">
-              Введите в поиске любую тему и узнайте, насколько популярной она
-              была в новостях за прошедшую неделю.
+              Enter any topic in the search and find out how popular it was in
+              the news for the last week.
             </p>
             <form class="page__form" novalidate>
               <input
                 id="input"
                 class="page__input"
                 type="text"
-                placeholder="Введите тему новости"
+                placeholder="Enter news topic"
                 type="text"
                 minlength="3"
                 maxlength="30"
                 required
               />
               <button type="submit" class="button button_blue" type="submit">
-                Искать
+                Search
               </button>
               <div class="page__error">
                 <span class="page__error-msg">
-                  Нужно ввести ключевое слово
+                  You need to enter the keyword
                 </span>
               </div>
             </form>
@@ -65,7 +65,7 @@
         src="<%=require('./images/icons/Ellipse.png')%>"
         alt="loading"
       />
-      <p class="searching__text">Идет поиск новостей...</p>
+      <p class="searching__text">Searching...</p>
     </div>
     <section class="nothing-found hide-block">
       <img
@@ -73,38 +73,38 @@
         src="<%=require('./images/icons/not-found_v1.svg')%>"
         alt="nothing found"
       />
-      <h3 class="nothing-found__title">Ничего не найдено</h3>
+      <h3 class="nothing-found__title">Nothing found</h3>
       <p class="nothing-found__text">
-        К сожалению по вашему запросу ничего не найдено.
+        Unfortunately, nothing was found on your request.
       </p>
     </section>
     <section class="results hide-block">
       <div class="container">
         <div class="results__head-block">
-          <h3 class="main-title">Результаты поиска</h3>
+          <h3 class="main-title">Results</h3>
           <a href="./analytics.html" class="results__link-analtyik"
-            >Посмотреть аналитику &#62;</a
+            >View analytics &#62;</a
           >
         </div>
         <div class="results__news-grid"></div>
-        <button class="button button_show-more">Показать еще</button>
+        <button class="button button_show-more">Show more</button>
       </div>
     </section>
     <div class="container">
       <section class="about">
         <picture class="about__photo">
           <source
-            srcset="<%=require('./images/pictures/author.webp')%>"
+            srcset="<%=require('./images/pictures/myAva.webp')%>"
             type="image/webp"
           />
           <img
             class="about__photo"
-            src="<%=require('./images/pictures/author.jpg')%>"
+            src="<%=require('./images/pictures/myAva.jpg')%>"
             alt="Author's photo"
           />
         </picture>
         <div class="about__subscr">
-          <h2 class="main-title">Об авторе</h2>
+          <h2 class="main-title">About the author</h2>
           <p class="main-text">
             Это блок с описанием автора проекта. Здесь следует указать, как вас
             зовут, чем вы занимаетесь, какими технологиями разработки владеете.
@@ -119,19 +119,17 @@
         <p class="footer__copy">&copy; 2020 Andrii Kulchytskyi</p>
         <ul class="footer__links">
           <li class="footer__link footer__link_footer">
-            <a class="footer__menu links_black" href="./index.html">Главная</a>
+            <a class="footer__menu links_black" href="./index.html">Home</a>
           </li>
           <li class="footer__link footer__link_footer">
-            <a class="footer__menu links_black" href="./about.html"
-              >О проекте</a
-            >
+            <a class="footer__menu links_black" href="./about.html">About</a>
           </li>
           <li class="footer__link footer__link_footer">
             <a
               class="footer__menu links_black"
               href="http://praktikum.yandex.ru"
               target="_blank"
-              >Яндекс.Практикум</a
+              >Yandex.Praktikum</a
             >
           </li>
         </ul>

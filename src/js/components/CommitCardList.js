@@ -14,11 +14,11 @@ export default class CommitCardList {
     render() {
         this.api.getCommits()
             .then((res) => {
-
+                console.log(res.length);
                 localStorage.setItem('git', JSON.stringify(res));
                 const el = JSON.parse(localStorage.getItem('git'));
 
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < res.length; i++) {
                     this.addCard(el[i].commit.committer.date, el[i].author.avatar_url, el[i].commit.committer.name, el[i].commit.committer.email, el[i].commit.message);
                 }
             })
