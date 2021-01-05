@@ -207,7 +207,7 @@ export default class Statistics {
 
         //add Month
         const date = new Date(Date.now());
-        this.domMounth.textContent = `(${new Intl.DateTimeFormat('ru-RU', {
+        this.domMounth.textContent = `(${new Intl.DateTimeFormat('en-EN', {
             month: 'long'
         }).format(date)})`;
 
