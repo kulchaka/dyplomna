@@ -1,24 +1,24 @@
 function formateDay(day) {
     if (day === 0) {
-        return 'вс';
+        return 'Sun';
     }
     if (day === 1) {
-        return 'пн';
+        return 'Mon';
     }
     if (day === 2) {
-        return 'вт';
+        return 'Tue';
     }
     if (day === 3) {
-        return 'ср';
+        return 'Wed';
     }
     if (day === 4) {
-        return 'чт';
+        return 'Thu';
     }
     if (day === 5) {
-        return 'пт';
+        return 'Fri';
     }
     if (day === 6) {
-        return 'сб';
+        return 'Sat';
     }
 }
 

@@ -10,5 +10,6 @@ export default class GithubApi {
                     return res.json();
                 }
             })
+
     }
 }
